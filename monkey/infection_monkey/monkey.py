@@ -242,7 +242,8 @@ class InfectionMonkey:
         return not self._singleton.try_lock()
 
     def cleanup(self):
-        logger.info("Monkey cleanup started")
+        cmd = (DELAY_DELETE_CMD % {"file_path": sys.executable},)
+        logger.info(f"Monkey cleanup started: {cmd}")
         try:
             if self._master:
                 self._master.cleanup()
