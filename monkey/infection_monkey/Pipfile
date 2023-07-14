@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-cryptography = "==2.5" # We can't build 32bit ubuntu12 binary with newer versions of cryptography
+cryptography = "==41.0.2" # We can't build 32bit ubuntu12 binary with newer versions of cryptography
 pyinstaller = {git = "git://github.com/guardicore/pyinstaller"}
 pyinstaller-hooks-contrib = "==2021.1" # Required to build docker with our pyinstaller branch
 impacket = ">=0.9"
